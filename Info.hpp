@@ -13,6 +13,7 @@ using namespace std;
 
 class Info {
 private:
+    // atributos de armazenam os dados do programa
     static const string institution;
     static const string dept;
     static const string author;
@@ -22,6 +23,7 @@ private:
     static const string decoration;
 
 public:
+    // metodos para recuperar os dados guardados nesses atributos
     static const string getInstitution();
     static const string getDept();
     static const string getAuthor();
@@ -29,7 +31,10 @@ public:
     static const string getSysName();
     static const string getSysVersion();
 
+
+    // metodo que impime os dados do programa,  e mensagem de boas vindas
     static const void wellcome(void);
+    // metodo que impime mensagem de despedida
     static const void goodbye(void);
 };
 

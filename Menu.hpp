@@ -17,12 +17,12 @@ using namespace std;
 class Menu
    {
    private:
-      string titulo;
-      vector<string> opcoes;
+      string titulo; // atributo que armazena o titulo do menu
+      vector<string> opcoes; // atributo que armazena as opções do menu
 
    public:
-      Menu(string titulo, vector<string> opcoes);
-      const virtual int getEscolha();
+      Menu(string titulo, vector<string> opcoes); // contrutor
+      const virtual int getEscolha(); // metodo que imprime o menu e captura escolha do usuario
    };
    
 #endif

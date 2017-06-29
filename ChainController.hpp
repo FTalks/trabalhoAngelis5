@@ -23,17 +23,23 @@ using namespace std;
 
 class ChainController {
 private:
+
+    // vetor de smart poiters dos objetos da cadeia de procesamento
     vector<unique_ptr<AbstractChainElement>> chainUnits;
+    //smart poiter do objeto de Mydata (contem o item que sera processado
     unique_ptr<MyDataObject> myData;
 public:
+    // construtor
     ChainController();
+    // metodo que contem o menu e chama os demais metodos (ponto inicial do programa)
     void start();
+    // le do usuario a string que sera processada
     void loadData(string valor);
-
+    // starta o processamento da cadeia
     void processChain();
-
+    // prepara a cadeia passando os itens do vetor para os ponteiros dentro de abstractchainElement
     void prepareChain();
-
+    // metodo responsavel por adicionar item de processamento a cadeia
     void createElements();
 
 };

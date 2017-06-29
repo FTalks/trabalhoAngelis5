@@ -19,14 +19,14 @@ using namespace std;
 
 class MyDataObject {
 private:
-    string myDataValue;
+    string myDataValue; // string que sera processada
 public:
-    MyDataObject(const string newValue);
-    MyDataObject(const MyDataObject& orig);
-    virtual ~MyDataObject();
+    MyDataObject(const string newValue); // construtor
+    MyDataObject(const MyDataObject& orig); // construtor de copia
+    virtual ~MyDataObject(); // destrutor
     
-    virtual void setValue(string newValue);
-    virtual string getValue(void);
+    virtual void setValue(string newValue); // Seta um novo valor na string de processamento
+    virtual string getValue(void); // retorna o valor da string
 };
 
 #endif /* MYDATAOBJECT_HPP */
