@@ -22,11 +22,28 @@ using namespace std;
 class ToLowerConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "ToLowerConcreteChainElement";
+
+    /**
+     * Recebe um MyDataObject e altera o valor dele de forma que todas as letras se tornem minúsaculas
+     * @param MyDataObject value
+     */
     void internalProcessing(MyDataObject * value) override;
 
 public:
+    /**
+     * constroi setando o próximo como null
+     * */
     ToLowerConcreteChainElement();
+
+    /**
+     * destroi setando o próximo como null
+     * */
     virtual ~ToLowerConcreteChainElement();
+
+    /**
+     * retorna o atual nome sobrescrevendo o método
+     * @return string this->nome
+     */
     string getName() override;
 };
 

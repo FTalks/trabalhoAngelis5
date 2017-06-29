@@ -22,14 +22,38 @@ using namespace std;
 class XorCriptoConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "XorCriptoConcreteChainElement";
+
+    /**
+     * Chave para encriptação
+     */
     string       key = "";
-    
+
+    /**
+     * é elevado o numero do caracter da string, com o numero do caracter da key correspondente
+     * @param MyDataObject value
+     */
     void internalProcessing(MyDataObject * value) override;
+
+    /**
+     * lê a chave de encriptação
+     */
     void readParameters() override;
 
 public:
+    /**
+     * constroi setando o próximo como null
+     * */
     XorCriptoConcreteChainElement();
+
+    /**
+     * destroi setando o próximo como null
+     * */
     virtual ~XorCriptoConcreteChainElement();
+
+    /**
+     * retorna o atual nome sobrescrevendo o método
+     * @return string this->nome
+     */
     string getName() override;
 };
 

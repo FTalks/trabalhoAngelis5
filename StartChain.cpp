@@ -20,7 +20,13 @@ using namespace std;
 #include "ChainController.hpp"
 
 using namespace std;
-
+/**
+ * Instancia um ChainController, printa na tela a mensagem de boas vindas, executa o método start() do ChainController
+ * e destrói o program, e logo depois executa o método goodbye() de Info.
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main(int argc, char** argv) {
     ChainController * program = new ChainController();
     Info::wellcome();

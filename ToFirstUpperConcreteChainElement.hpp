@@ -22,11 +22,28 @@ using namespace std;
 class ToFirstUpperConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "ToFirstUpperConcreteChainElement";
+
+    /**
+     * Recebe um MyDataObject e altera o valor dele de forma que a primeira letra de cada palavra se torne maiúscula
+     * @param MyDataObject value
+     */
     void internalProcessing(MyDataObject* value) override;
 
 public:
+    /**
+     * constroi setando o próximo como null
+     * */
     ToFirstUpperConcreteChainElement();
+
+    /**
+     * destroi setando o próximo como null
+     * */
     virtual ~ToFirstUpperConcreteChainElement();
+
+    /**
+     * retorna o atual nome sobrescrevendo o método
+     * @return string this->nome
+     */
     string getName() override;
 };
 
